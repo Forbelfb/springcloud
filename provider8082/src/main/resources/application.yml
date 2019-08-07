@@ -1,0 +1,22 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: provider-ticket
+
+eureka:
+  instance:
+    #    hostname: eureka-server
+    prefer-ip-address: true
+    instance-id: microservice-provider8082
+
+  client:
+    service-url:
+      defaultZone: http://eureka-server8761:8761/eureka/,http://eureka-server8762:8762/eureka/,http://eureka-server8763:8763/eureka/
+
+info:
+  app.name: microservice-provider-ticket
+  app.version: 1.0.0
+  company.name: www.com
+#  build.artifacId: ${project.artifactId}
+#  build.version: ${project.version}
